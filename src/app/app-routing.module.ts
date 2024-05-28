@@ -8,6 +8,7 @@ import {HomeComponent} from "./home/home.component";
 import {ReserverComponent} from "./reserver/reserver.component";
 import {AjouterhebergementComponent} from "./ajouterhebergement/ajouterhebergement.component";
 import {ReservationsComponent} from "./reservations/reservations.component";
+import {UpdatehebergementComponent} from "./updatehebergement/updatehebergement.component";
 
 
 const routes: Routes = [
@@ -16,11 +17,10 @@ const routes: Routes = [
   {path:"hebergementdetails",component:HebergementdetailsComponent},
   {path:"home",component:HomeComponent},
   {path:"",redirectTo:"/home",pathMatch:"full"},
-  //{path:"reserver",component:ReserverComponent },
-
   {path:'reserver/:id',component:ReserverComponent },
   {path:'ajouterHebergement',component:AjouterhebergementComponent },
   {path:'reservations',component:ReservationsComponent},
+  {path:'update/:id',component:UpdatehebergementComponent},
 
 ];
 

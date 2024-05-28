@@ -70,6 +70,7 @@ export class AjouterhebergementComponent implements OnInit{
         next:data=>{
 
           alert("hebergement added successfully")
+          this.route.navigate(['/hebergement']);
 
 
         },error:err=>{

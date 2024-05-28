@@ -14,6 +14,7 @@ import {NgOptimizedImage} from "@angular/common";
 import { ReserverComponent } from './reserver/reserver.component';
 import { AjouterhebergementComponent } from './ajouterhebergement/ajouterhebergement.component';
 import { ReservationsComponent } from './reservations/reservations.component';
+import { UpdatehebergementComponent } from './updatehebergement/updatehebergement.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { ReservationsComponent } from './reservations/reservations.component';
     ReserverComponent,
      AjouterhebergementComponent,
      ReservationsComponent,
+     UpdatehebergementComponent,
 
   ],
     imports: [

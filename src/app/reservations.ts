@@ -23,6 +23,7 @@ export interface Hebergement {
   etage:                 number;
   categorie:             Categorie;
   ville:                 Ville;
+
 }
 
 export interface Categorie {

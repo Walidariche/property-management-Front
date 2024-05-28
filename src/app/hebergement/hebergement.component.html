@@ -42,25 +42,27 @@
             <li>Etage:<span> {{h.etage}}</span></li>
             <li>Parking: <span>{{h.placesdestationnement}} places</span></li>
           </ul>
+
+
           <div  class="main-button">
-           <a href="/reserver" [routerLink]="['/reserver', h.id]">Reserver </a>
+          <a href="/reserver" [routerLink]="['/reserver', h.id]">Reserver </a>
           </div>
-          <div >
-           <div >
-           </div>
+          <div class="parent">
+          <div class="btnupdate">
+          <div  class="main-button ">
+           <a href="/update" [routerLink]="['/update', h.id]" >Update </a>
+          </div>
+          </div>
+          </div>
             <div class="parent">
             <div class="btnDelete">
           <button (click)="handledeletecustomer(h)" class="btn btn-danger">
             <i class="bi bi-trash"> Supprimer</i>
           </button>
             </div>
-
-
-            </div>
-
-
-
           </div>
+
+
         </div>
       </div>
     </div>

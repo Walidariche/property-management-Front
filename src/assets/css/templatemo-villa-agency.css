@@ -231,6 +231,17 @@ body {
   align-items: center;
    /* Adjust this as needed */
 }
+.btnupdate{
+
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 50px;
+  padding: 0px 30px;
+  border-radius: 25px;
+  transition: all .3s;
+  display: inline-block;
+}
 .btnDelete{
 
   font-size: 14px;
