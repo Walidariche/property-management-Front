@@ -165,7 +165,10 @@ body {
 
 .section {
   margin-top: 120px;
+
 }
+
+
 
 .section-heading {
   margin-bottom: 70px;
@@ -1545,6 +1548,8 @@ Properties Style
 .properties ul.pagination li a.is_active {
   background-color: #f35525;
   color: #fff;
+  margin-top: 0;
+  padding-top: 0;
 }
 
 

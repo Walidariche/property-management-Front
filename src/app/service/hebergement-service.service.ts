@@ -44,8 +44,8 @@ export class HebergementServiceService {
     return this.http.delete(this.host+"/deleteHebergement/"+Id);
   }
 
-  public getreservation(){
-   return  this.http.get(this.host+"/AllReservations");
+  public getreservation(page:number,size:number):Observable<any>{
+   return  this.http.get(`${this.host}/AllReservations?page=${page}&size=${size}`);
   }
 
   public UpdateHebergement(hebergement:Hebergement):Observable<Hebergement>{
