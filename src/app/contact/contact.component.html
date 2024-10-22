@@ -1,0 +1,77 @@
+<div class="page-heading header-text">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <span class="breadcrumb"><a href="#">Accueil</a>  /  contactez-nous</span>
+        <h3>contactez-nous</h3>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="contact-page section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="section-heading">
+          <h6>| contactez-nous</h6>
+          <h2>Entrez en contact avec nos agents</h2>
+        </div>
+        <p>Pour toute question ou demande d'information concernant notre service de gestion des hébergements, n'hésitez pas à nous contacter. Notre équipe dédiée est là pour vous assister et répondre à vos besoins. Merci de votre visite et de votre confiance.</p>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="item phone">
+              <img src="assets/images/phone-icon.png" alt="" style="max-width: 52px;">
+              <h6>06-02-03-40-00<br><span>Numéro de téléphone</span></h6>
+            </div>
+          </div>
+          <div class="col-lg-12">
+            <div class="item email">
+              <img src="assets/images/email-icon.png" alt="" style="max-width: 52px;">
+              <h6>Casa.Cool@gmail.com<br><span>E-mail professionnelle</span></h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <form id="contact-form" action="" method="post" [formGroup]="contactFormGroup" (ngSubmit)="handleContact()" >
+
+
+          <div class="row">
+
+            <div class="col-lg-12">
+              <fieldset>
+                <label for="email">Adresse email</label>
+                <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your E-mail..." required="" formControlName="toemail">
+              </fieldset>
+            </div>
+            <div class="col-lg-12">
+              <fieldset>
+                <label for="subject">Objet</label>
+                <input type="subject" name="subject" id="subject" placeholder="Subject..." autocomplete="on" formControlName="subject">
+              </fieldset>
+            </div>
+            <div class="col-lg-12">
+              <fieldset>
+                <label for="message">Message</label>
+                <textarea name="message" id="message" placeholder="Your Message" formControlName="body"></textarea>
+              </fieldset>
+            </div>
+            <div class="col-lg-12">
+              <fieldset>
+                <button type="submit" id="form-submit" class="orange-button">Envoyer le message</button>
+              </fieldset>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col-lg-12">
+        <div id="map">
+
+
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3324.3909850810733!2d-7.628374123810469!3d33.569196343081316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7d2b110853a47%3A0xc7098dd7e152153b!2sR%C3%A9sidence%20Universitaire%20Abdelmoumen%20Centre!5e0!3m2!1sfr!2sma!4v1719591261831!5m2!1sfr!2sma" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" width="100%" height="500px" frameborder="0" style="border:0; border-radius: 10px; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);" allowfullscreen="" ></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

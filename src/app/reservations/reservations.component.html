@@ -1,0 +1,72 @@
+<div class="page-heading header-text">
+  <div class="container">
+    <div class="row">
+     <div class="col-lg-12">
+
+        <span class="breadcrumb"><a href="#"></a> Ici, vous pouvez voir toutes vos réservations déjà effectuées</span>
+        <h3> Consultez vos réservations</h3>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section properties">
+<div class="contact-page section">
+
+<div  class="col-lg-10 " >
+    <div class="container" *ngIf="reservation && reservation.length">
+      <div class="row" >
+        <table class="table" >
+          <tr>
+            <th>ID</th>
+            <th>Nom Client</th>
+            <th>Email</th>
+            <th>Telephone</th>
+            <th>Date Reservation</th>
+            <th>Categorie</th>
+            <th>Ville</th>
+            <th>Date ARRIVÉE </th>
+            <th>Date DÉPART </th>
+            <th>Jours</th>
+            <th>Prix Par Nuit</th>
+            <th>Montant</th>
+
+          </tr>
+          <tr *ngFor="let r of reservation">
+
+
+            <td> {{r.id}}</td>
+            <td> {{r.nom}}</td>
+            <td> {{r.email}}</td>
+            <td>{{r.telephone}}</td>
+            <td >{{r.date_reservation |date: ' dd/MM/YYYY HH:mm'}} AM</td>
+            <td>{{r.hebergement.categorie.type}}</td>
+            <td>{{r.hebergement.ville.nomVille}}</td>
+            <td>{{r.date_debut |date: ' dd/MM/YYYY '}}</td>
+            <td>{{r.date_fin |date: ' dd/MM/YYYY '}}</td>
+            <td class="text-center">{{calculateDaysDifference(r.date_debut, r.date_fin)}}</td>
+            <td class="text-center">{{r.hebergement.prix}} </td>
+            <td class="text-center">{{r. montant}} </td>
+          </tr>
+        </table>
+
+
+      </div>
+    </div>
+</div>
+        <div class="row">
+          <div class="col-lg-12">
+            <ul class="pagination">
+              <li *ngFor="let page of pagination.pages" (click)="loadPage(page)">
+                <button class="btnpagination"> {{page + 1}}</button>
+              </li>
+             </ul>
+
+        </div>
+      </div>
+
+    </div>
+</div>
+
+
+

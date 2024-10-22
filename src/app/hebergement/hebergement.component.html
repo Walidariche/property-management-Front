@@ -1,0 +1,83 @@
+<div class="page-heading header-text">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <span class="breadcrumb"><a href="#"></a> Séjours de luxe</span>
+        <h3>Découvrez votre séjour parfait</h3>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section properties">
+
+  <div class="container" *ngIf="hebergements">
+    <ul class="properties-filter" >
+
+
+      <li>
+        <a class="is_active" href="#!" data-filter="*">Show All</a>
+      </li>
+      <div class="container" *ngIf="Categories">
+      <li *ngFor="let c of Categories">
+        <a>{{c.type}}</a>
+      </li>
+      <br>
+      <li>
+        <a class="is_active " href="ajouterHebergement"  >AJouter Votre Annonce</a>
+      </li>
+      </div>
+    </ul>
+
+    <div class="row properties-box">
+     <!-- <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 rac adv" *ngIf="hebergements" >-->
+        <div class="perRow properties-items" >
+        <div class="item"   *ngFor="let h of hebergements"  >
+       <a   >   <img height="280" src="{{hebergementService.host+'/ImageHebergement/'+h.id}}" alt=""></a>
+          <span class="category"> {{h.categorie.type}}</span>
+          <h6>{{ h.prix }}&nbsp;MAD </h6>
+          <h4><a href="property-details.html">{{h.ville.adresse}}, {{h.ville.nomVille}}</a></h4>
+          <ul>
+            <li>Chambres: <span>{{h.chambre}}</span></li>
+            <li>Salles de bains: <span>{{h.sallesdebains}}</span></li>
+            <li>Surface: <span>{{h.capacite}} <span>m2</span> </span></li>
+            <li>Etage:<span> {{h.etage}}</span></li>
+            <li>Parking: <span>{{h.placesdestationnement}} places</span></li>
+          </ul>
+
+
+          <div  class="main-button">
+          <a href="/reserver" [routerLink]="['/reserver', h.id]">Reserver </a>
+          </div>
+          <div class="parent">
+          <div class="btnupdate">
+          <div  class="main-button ">
+           <a href="/update" [routerLink]="['/update', h.id]" >Update </a>
+          </div>
+          </div>
+          </div>
+            <div class="parent">
+            <div class="btnDelete">
+          <button (click)="handledeletecustomer(h)" class="btn btn-danger">
+            <i class="bi bi-trash"> Supprimer</i>
+          </button>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <ul class="pagination">
+          <li *ngFor="let page of pagination.pages" (click)="loadPage(page)">
+            <button class="btnpagination">{{page + 1}}</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+

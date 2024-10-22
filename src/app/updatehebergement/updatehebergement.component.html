@@ -1,0 +1,83 @@
+<div class="contact-page section " >
+  <div class="container">
+    <div class="row">
+<div class="col-lg-8">
+  <form id="contact-form" [formGroup]="editHebergementForm" (ngSubmit)="handleUpdateHebergement()" action="" method="post">
+    <div class="row">
+     <!-- <div class="col-lg-6">
+        <fieldset>
+          <label for="ID">ID</label>
+          <input type="text" name="name" id="ID"  autocomplete="on" required formControlName="id">
+        </fieldset>
+      </div>-->
+      <div class="col-lg-6">
+        <fieldset>
+          <label for="Nom">Nom</label>
+          <input type="text" name="name" id="Nom"  autocomplete="on" required formControlName="nom">
+        </fieldset>
+      </div>
+      <div class="col-lg-6">
+        <fieldset>
+          <label for="image">Image</label>
+          <input type="text" name="image" id="image"   required="" formControlName="image">
+        </fieldset>
+      </div>
+
+      <div class="col-lg-6">
+        <fieldset>
+          <label for="prix">Prix</label>
+          <input type="number" name="subject" id="prix"  autocomplete="on"  formControlName="prix">
+        </fieldset>
+      </div>
+
+      <div class="col-lg-6">
+        <fieldset>
+          <label for="capacite">Surface </label>
+          <input type="number" name="capacite" id="capacite"  formControlName="capacite" >
+        </fieldset>
+      </div>
+      <div class="col-lg-6">
+        <fieldset>
+          <label for="chambre">Chambre</label>
+          <input type="number" name="chambre" id="chambre"  formControlName="chambre" >
+        </fieldset>
+      </div>
+      <div class="col-lg-6">
+        <fieldset>
+          <label for="sallesdebains">salles de bains</label>
+          <input type="number" name="sallesdebains" id="sallesdebains"  formControlName="sallesdebains"  >
+        </fieldset>
+      </div>
+      <div class="col-lg-6">
+        <fieldset>
+          <label for="placesdestationnement">places des tationnement</label>
+          <input type="number" name="placesdestationnement" id="placesdestationnement"  formControlName="placesdestationnement" >
+        </fieldset>
+      </div>
+      <div class="col-lg-6">
+        <fieldset>
+          <label for="etage">etage</label>
+          <input type="number" name="etage" id="etage"  formControlName="etage"  >
+        </fieldset>
+      </div>
+
+      <div class="col-lg-12">
+        <fieldset>
+          <label for="description">Description</label>
+          <textarea name="message" id="description" placeholder="Description détaillée de l'hébergement, ses caractéristiques, ses équipements...." formControlName="description"></textarea>
+        </fieldset>
+      </div>
+
+      <div class="col-lg-12">
+        <fieldset>
+          <button type="submit" id="form-submit" class="orange-button">Update VOTRE Hebergement</button>
+        </fieldset>
+      </div>
+    </div>
+  </form>
+</div>
+
+</div>
+</div>
+</div>
+
